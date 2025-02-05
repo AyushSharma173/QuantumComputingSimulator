@@ -1,0 +1,51 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quantum Computer Simulator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    textarea {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 14px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quantum Computer Simulator</h1>
+  <form method="post">
+    <label for="circuit">Enter circuit commands (one per line):</label><br>
+    <textarea name="circuit" id="circuit" placeholder="Example:
+init 2
+h 0
+x 1
+h 1">{{ result.circuit if result else "" }}</textarea><br><br>
+    <button type="submit">Run Simulation</button>
+  </form>
+  
+  {% if result %}
+  <div class="result">
+    <h2>Simulation Result</h2>
+    <h3>Final State Vector</h3>
+    <p>{{ result.state | safe }}</p>
+    <h3>Measurement Probabilities</h3>
+    <p>{{ result.probabilities | safe }}</p>
+  </div>
+  {% endif %}
+</body>
+</html>
