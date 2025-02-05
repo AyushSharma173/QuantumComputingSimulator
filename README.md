@@ -1,8 +1,7 @@
 # Quantum Circuit Simulator in Python (Web Application)
 
 **Author:** Ayush Sharma  
-**Email:** [your.email@example.com]
-
+**Email:** ayush.psr@gmail.com
 ## Overview
 
 This project implements a lightweight quantum circuit simulator with a web-based interface, built entirely in Python. It enables users to define and simulate quantum circuits through a simple command syntax and view the resulting state vectors and measurement probabilities directly in their browser. The simulator supports a range of fundamental quantum operations and is designed to be both educational and extensible.
@@ -92,8 +91,3 @@ This project was developed independently as part of an in-depth exploration of q
 ## License
 
 This project is licensed under the MIT License.
-```
-
----
-
-This README now emphasizes a modular, extensible design with a professional tone and clear technical details. It avoids any direct references to the original GitHub project, presenting the work as your own creation suitable for inclusion in your portfolio.
